@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+</head>
+<body class="light">
+  <div class="container">
+    <header>
+      <h1>Tic Tac Toe</h1>
+      <button id="theme-toggle">🌙</button>
+    </header>
+
+    <div id="board" class="board"></div>
+
+    <div class="status" id="status">Player X's turn</div>
+
+    <div id="winMessage" class="win-message hidden">
+      <svg viewBox="0 0 500 100" class="curved-text">
+        <path id="curve" d="M50,80 Q250,0 450,80" fill="transparent"/>
+        <text>
+          <textPath href="#curve" startOffset="50%" text-anchor="middle" id="winnerText">🎉 Congratulations! 🎉</textPath>
+        </text>
+      </svg>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+    <button id="reset">🔁 Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
